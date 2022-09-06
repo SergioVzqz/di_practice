@@ -11,7 +11,7 @@ LIMIT_DAY = datetime.strptime(f'26/06/{TODAY.year}',"%d/%m/%Y")
 class AgeValidator(Validator):
     def __init__(self, birthdate: datetime):
         self._validate_format(birthdate)
-        self.birthdate = self.validate_value(datetime.strptime(birthdate,"%d/%m/%Y"))
+        self.birthdate = birthdate
 
     def validate_value(self, birthdate):
         result: Dict = {

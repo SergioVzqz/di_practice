@@ -10,9 +10,9 @@ class GraduationDateValidator(Validator):
 
     def __init__(self, graduation_date: datetime):
         self._validate_format(graduation_date)
-        self.graduation_date = self.validate_value(graduation_date)
+        self.graduation_date = graduation_date
 
-    def validate_value(self, graduation_date) -> Dict[bool, str]:
+    def validate_value(self, graduation_date) -> Dict:
         result: Dict = {
             'approved': False,
             'reason': ''

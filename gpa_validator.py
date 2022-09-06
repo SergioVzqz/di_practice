@@ -8,7 +8,7 @@ VALID_GPA = 6.0
 class GpaValidator(Validator):
     def __init__(self, gpa: float):
         self._validate_format(gpa)
-        self.gpa = self.validate_value(float(gpa))
+        self.gpa = gpa
 
     def validate_value(self, gpa):
         result: Dict[bool, str] = {
